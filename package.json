@@ -20,7 +20,7 @@
     "unit-test": "NODE_PATH=dist/ mocha \"dist/test/**/*.test.js\"",
     "integration-test": "NODE_PATH=dist/ mocha \"dist/test/**/*.spec.js\""
   },
-  "author": "",
+  "author": "shadow-walker",
   "license": "ISC",
   "devDependencies": {
     "@types/chai": "^4.3.4",
