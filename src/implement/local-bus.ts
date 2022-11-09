@@ -1,5 +1,5 @@
 import { IEventBus, MsgBusCallback } from '../abstract'
-import { makeRandomString } from '../util'
+import { makeUniqueId } from '../util'
 
 function matchRuleShort(str: string, rule: string): boolean {
   const escapeRegex = (str: string) =>
@@ -16,7 +16,7 @@ export class LocalEventBus implements IEventBus {
   }
 
   public register = (channel: string, callback: MsgBusCallback): string => {
-    const listenerId = makeRandomString(10)
+    const listenerId = makeUniqueId()
     let channelListeners = this._channels.get(channel)
     if (!channelListeners) {
       channelListeners = new Map()
