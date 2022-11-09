@@ -1,5 +1,5 @@
 {
-  "name": "@shadow-walker811/shadow-event-bus",
+  "name": "shadow-event-bus",
   "version": "1.0.0",
   "main": "./dist/index.js",
   "module": "./lib/index.js",
