@@ -1,0 +1,40 @@
+{
+  "name": "shadow-event-bus",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/index.js",
+  "module": "./lib/index.js",
+  "files": [
+    "lib/"
+  ],
+  "scripts": {
+    "start": "NODE_PATH=dist/ node dist/index.js",
+    "prebuild": "rm -rf dist",
+    "build": "tsc",
+    "watch": "tsc -w",
+    "server": "tsc && NODE_PATH=dist/ node dist/index.js",
+    "libbuild": "rm -rf lib && tsc -p tsconfig.module.json",
+    "lint": "eslint --ext .ts .",
+    "lintfix": "eslint --fix --ext .ts .",
+    "test": "npm run unit-test && npm run integration-test",
+    "unit-test": "NODE_PATH=dist/ mocha \"dist/test/**/*.test.js\"",
+    "integration-test": "NODE_PATH=dist/ mocha \"dist/test/**/*.spec.js\""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/chai": "^4.3.4",
+    "@types/mocha": "^10.0.0",
+    "@types/node": "^18.11.9",
+    "@typescript-eslint/eslint-plugin": "^5.42.1",
+    "@typescript-eslint/parser": "^5.42.1",
+    "chai": "^4.3.7",
+    "eslint": "^8.27.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "mocha": "^10.1.0",
+    "prettier": "^2.7.1",
+    "source-map-support": "^0.5.21",
+    "typescript": "^4.8.4"
+  }
+}
